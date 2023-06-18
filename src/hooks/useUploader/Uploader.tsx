@@ -14,6 +14,7 @@ export type UploaderPropTypes = ComponentPropsWithRef<"div"> & {
     uploadInstruction?: string;
     allowedSizePerFile?: number;
     allowedMimeTypes?: string[];
+    uploaderButtonLabel?: string;
 };
 
 type FileListItemPropTypes = {
@@ -145,6 +146,7 @@ export default function useUploader() {
             addFromUrl = false,
             allowedSizePerFile = 1000000, // 1MB
             allowedMimeTypes = ["image/png", "image/jpg", "image/jpeg", "application/pdf"],
+            uploaderButtonLabel = "Upload",
             ...rest } = props;
 
         _allowedSizePerFile = allowedSizePerFile;
@@ -173,7 +175,7 @@ export default function useUploader() {
                     </div>
                 </div> : false
             }
-            {files && files.length ? <button className={`${styles.uploaderFormButton}`} data-id="upload-action-btn" type="button" onClick={onFileUploaded}>Upload</button> : false}
+            {files && files.length ? <button className={`${styles.uploaderFormButton}`} data-id="upload-action-btn" type="button" onClick={onFileUploaded}>{uploaderButtonLabel}</button> : false}
             {
                 addFromUrl ?
                     <>
