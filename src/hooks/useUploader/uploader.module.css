@@ -1,0 +1,146 @@
+.uploaderContainer,
+.uploaderHeader,
+.uploaderForm,
+.fileUploadProgress,
+.uploaderFileList,
+.uploaderFileListItem,
+.uploaderFileListItems,
+.uploaderUrlOptionContainer,
+.uploaderUrlOptionField {
+	display: flex;
+}
+.uploaderContainer {
+	max-width: 30rem;
+	width: 100%;
+	border-radius: var(--radius-md, 0.4rem);
+	background: var(--white, #fff);
+	padding: var(--space-lg, 1.5rem);
+	flex-direction: column;
+	gap: var(--space-lg, 1.5rem);
+	border: 1px solid var(--smoke, #ddd);
+}
+.uploaderHeader {
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+.uploaderIcons {
+	min-height: 1.3rem;
+	min-width: 1.3rem;
+	height: 1.3rem;
+	width: 1.3rem;
+	cursor: pointer;
+	color: #666;
+}
+.uploaderIcons[data-id="upload-form-icon"] {
+	background: var(--smoke, #ddd);
+	height: 3rem;
+	width: 3rem;
+	padding: var(--space-sm, 0.5rem);
+	border-radius: var(--radius-sm, 0.2rem);
+	margin-bottom: var(--space-sm, 0.5rem);
+}
+.uploaderForm {
+	gap: var(--space-sm, 0.5rem);
+	flex-direction: column;
+	max-height: 15rem;
+	height: 100%;
+	border-style: dashed;
+	border-width: 1.5px;
+	border-color: var(--smoke, #ddd);
+	padding: var(--space-lg, 2rem) var(--space-md, 1rem);
+	align-items: center;
+	justify-content: center;
+}
+.uploaderForm span[role="button"] {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.uploaderForm p[data-id="upload-instruction"] {
+	color: var(--gray, #999);
+	font-size: 0.9rem;
+}
+.uploaderFileList {
+	gap: var(--space-md, 0.5rem);
+	flex-direction: column;
+}
+.uploaderFileList h3 {
+	font-size: 0.9rem;
+}
+.uploaderFileListItems {
+	flex-direction: column;
+	gap: var(--space-md, 1rem);
+	border: 1px solid var(--smoke, #ddd);
+	border-radius: var(--radius-sm, 0.2rem);
+	padding: var(--space-md, 1rem);
+}
+.uploaderFileListItem {
+	align-items: center;
+	gap: var(--space-sm, 0.5rem);
+}
+.uploaderFileListItem p[data-id="filename"] {
+	font-size: 0.9rem;
+	max-width: 12rem;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	/* margin: 0 var(--space-sm, 0.5rem); */
+}
+.fileUploadProgress {
+	/* width: 50%; */
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	gap: var(--space-sm, 0.5rem);
+}
+.fileUploadProgress progress {
+	appearance: none;
+	border-radius: 10rem 10rem;
+	overflow: hidden;
+	height: 0.5rem;
+	width: 80%;
+}
+.fileUploadProgress progress::-webkit-progress-value {
+	background: var(--black, #222);
+}
+.fileUploadProgress progress::-webkit-progress-bar {
+	background: rgba(0, 0, 0, 0.2);
+}
+.uploaderUrlOptionContainer {
+	flex-direction: column;
+	gap: var(--space-md, 0.5rem);
+}
+.uploaderUrlOptionContainer h3 {
+	font-size: 0.9rem;
+}
+.uploaderUrlOptionField {
+	gap: var(--space-md, 1rem);
+	flex-wrap: wrap;
+}
+.uploaderUrlOptionField input {
+	border: 1px solid var(--smoke, #ddd);
+	flex: 1;
+	border-radius: var(--radius-sm, 0.2rem);
+	padding: var(--space-sm, 0.5rem) var(--space-md, 1rem);
+}
+.uploaderUrlOptionField input:active,
+.uploaderUrlOptionField input:focus {
+	outline: var(--black, #222) 1px solid;
+}
+.uploaderUrlOptionField button,
+.uploaderContainer [data-id="upload-action-btn"] {
+	background: var(--black, #222);
+	border: 1px solid var(--black, #222);
+	color: var(--white, #fff);
+	padding: var(--space-sm, 0.5rem) var(--space-lg, 2rem);
+	border-radius: var(--radius-sm, 0.2rem);
+	margin: 0 0 0 auto;
+	cursor: pointer;
+}
+.uploaderContainer p[data-id="divider"] {
+	font-size: 0.9rem;
+	color: var(--gray, #999);
+	text-align: center;
+}
+
