@@ -29,4 +29,8 @@ type UploaderPropTypes = ComponentPropsWithRef<"div"> & {
 	allowedMimeTypes?: string[]; // default - ["image/png","image/jpg","image/jpeg","application/pdf"]
 };
 ```
+![Screenshot 2023-06-18 at 3 48 21 PM](https://github.com/Aakash1103Jha/raw-ui/assets/52240895/3f8346cd-41ef-4559-a867-367d06339b0e)
+
+![Screenshot 2023-06-18 at 3 48 39 PM](https://github.com/Aakash1103Jha/raw-ui/assets/52240895/60664516-74ce-4c49-8413-fcfc5067c0e9)
+
 
